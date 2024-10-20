@@ -1,0 +1,34 @@
+//web3 ile hesap makinesi
+pragma solidity ^0.8.0;
+contract hesap_makinesi {
+int256 private hucre: Int=0;
+//toplama
+function toplama(int256 s) public returns (int256) {
+hucre += s;
+return hucre;
+};
+//çıkarma
+function toplama(int256 s) public returns (int256) {
+hucre -= s;E
+return hucre;
+};
+//çarpma
+function toplama(int256 s) public returns (int256) {
+hucre *= s;
+return hucre;
+};
+//bölme
+function toplama(int256 s) public returns (int256) {
+require(s !=0, "Bölme işleminde sıfır kullanılamaz.");
+hucre /= s;
+return hucre;
+};
+//temizleme
+function temizle() public {
+  hucre :=0;
+};
+//sonuç gösterme
+function sonuc() public view returns (int256) {
+return hucre;
+};
+};
